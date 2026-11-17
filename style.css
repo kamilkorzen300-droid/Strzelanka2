@@ -1,0 +1,171 @@
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+  touch-action: none;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 15px 24px;
+  margin: 7px;
+  background: linear-gradient(135deg, #168cff, #754bff);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  background: radial-gradient(circle at top, #263e65, #101827 70%);
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+h1 {
+  color: #66caff;
+  font-size: clamp(28px, 7vw, 48px);
+  text-shadow: 0 0 20px #168cff;
+}
+
+h2 {
+  color: #66caff;
+}
+
+.money {
+  font-size: 25px;
+  color: gold;
+  margin: 10px;
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 5px;
+  background: #101827bb;
+  font-size: clamp(12px, 3vw, 18px);
+}
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+#message {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0 2px 5px black;
+}
+
+#mobileControls {
+  position: absolute;
+  inset: auto 0 20px;
+  height: 150px;
+  pointer-events: none;
+}
+
+#joystick {
+  position: absolute;
+  bottom: 5px;
+  left: 22px;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #ffffff80;
+  border-radius: 50%;
+  background: #ffffff22;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+#stick {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 33px;
+  top: 33px;
+  border-radius: 50%;
+  background: #66caff;
+}
+
+#mobileControls button {
+  position: absolute;
+  pointer-events: auto;
+  width: 65px;
+  height: 65px;
+  padding: 5px;
+  border-radius: 50%;
+  touch-action: none;
+}
+
+#fire {
+  right: 25px;
+  bottom: 20px;
+  background: #e83e55;
+}
+
+#reload {
+  right: 105px;
+  bottom: 95px;
+}
+
+#jump {
+  right: 110px;
+  bottom: 10px;
+}
+
+.shopItem {
+  width: min(320px, 90vw);
+  padding: 12px;
+  margin: 5px;
+  background: #263e65;
+  border-radius: 12px;
+}
+
+canvas {
+  display: block;
+  touch-action: none;
+}
